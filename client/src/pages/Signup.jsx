@@ -26,7 +26,7 @@ function Signup() {
 
   const signUp = async () => {
     try{
-      const response = await axios.post("http://localhost:8000/api/auth/signup", {
+      const response = await axios.post("https://w3villa-assignment-16no.onrender.com/api/auth/signup", {
         firstName,
         lastName,
         email,

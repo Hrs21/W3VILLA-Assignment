@@ -59,7 +59,7 @@ async function login(req, res) {
             { expiresIn: '1h' });
 
         // Set cookie with token
-        res.cookie('authToken', token, { httpOnly: true, secure: false });
+        res.cookie('authToken', token, { httpOnly: true, secure: true, sameSite: "None" });
 
         res.status(200).json({success:true, token:token, message: 'Login successful' });
     } catch (error) {

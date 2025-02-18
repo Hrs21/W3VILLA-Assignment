@@ -26,7 +26,7 @@ function Login() {
     setIsLoading(true);
     try {
 
-      const res = await axios.post("http://localhost:8000/api/auth/login", {
+      const res = await axios.post("https://w3villa-assignment-16no.onrender.com/api/auth/login", {
         email,
         password,
       }, {withCredentials: true});

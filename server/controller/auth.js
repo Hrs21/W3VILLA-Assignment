@@ -61,7 +61,7 @@ async function login(req, res) {
         // Set cookie with token
         res.cookie('authToken', token, { httpOnly: true, secure: false });
 
-        res.status(200).json({success:true, message: 'Login successful' });
+        res.status(200).json({success:true, token:token, message: 'Login successful' });
     } catch (error) {
         res.status(500).json({succss:false, message: 'Internal server error', error: error.message });
     }
